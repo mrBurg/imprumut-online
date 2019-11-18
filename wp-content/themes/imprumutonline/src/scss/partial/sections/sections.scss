@@ -1,0 +1,16 @@
+.section {
+  margin: 1em auto;
+  max-width: $maxWidth;
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  @import './about-us.scss',
+  './we-are-creative.scss',
+  './best-prices.scss',
+  './summary.scss',
+  './social.scss',
+  './latest.scss',
+  './footer.scss';
+}

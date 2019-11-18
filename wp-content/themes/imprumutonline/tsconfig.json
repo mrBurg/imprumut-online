@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "noEmitOnError": true,
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "allowJs": false,
+    "rootDir": ".",
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "files": ["./declaration.d.ts"],
+  "include": ["./declaration.d.ts"]
+}

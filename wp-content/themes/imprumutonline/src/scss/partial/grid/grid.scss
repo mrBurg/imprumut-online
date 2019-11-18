@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: NeueHaas;
+  height: auto !important;
+  height: 100%;
+  line-height: 1.5em;
+  min-width: $minWidth;
+  width: 100%;
+}
+
+body {
+  @include respond('xxl') {
+    font-size: 1.2em;
+  }
+}
+
+.container {
+  display: flex;
+  flex-flow: column nowrap;
+}

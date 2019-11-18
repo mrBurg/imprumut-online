@@ -1,0 +1,39 @@
+$font-folder: "./../fonts/" !default;
+
+@function fornt-url($path, $url) {
+  @return url($font-folder + $path + $url);
+}
+
+@function fornt-local($path, $url) {
+  @return local($font-folder + $path + $url);
+}
+
+@font-face {
+  font: {
+    family: "NeueHaas";
+    style: normal;
+    weight: normal;
+  }
+
+  src: fornt-url("NeueHaasUnicaW1G-Regular/", "NeueHaasUnicaW1G-Regular.eot");
+  src: fornt-url("NeueHaasUnicaW1G-Regular/", "NeueHaasUnicaW1G-Regular.eot?#iefix") format("embedded-opentype"),
+  fornt-url("NeueHaasUnicaW1G-Regular/", "NeueHaasUnicaW1G-Regular.svg") format("svg"),
+  fornt-url("NeueHaasUnicaW1G-Regular/", "NeueHaasUnicaW1G-Regular.ttf") format("truetype"),
+  fornt-url("NeueHaasUnicaW1G-Regular/", "NeueHaasUnicaW1G-Regular.woff") format("woff"),
+  fornt-url("NeueHaasUnicaW1G-Regular/", "NeueHaasUnicaW1G-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font: {
+    family: "NeueHaas";
+    style: normal;
+    weight: bold;
+  }
+
+  src: fornt-url("NeueHaasUnicaW1G-Bold/", "NeueHaasUnicaW1G-Bold.eot");
+  src: fornt-url("NeueHaasUnicaW1G-Bold/", "NeueHaasUnicaW1G-Bold.eot?#iefix") format("embedded-opentype"),
+  fornt-url("NeueHaasUnicaW1G-Bold/", "NeueHaasUnicaW1G-Bold.svg") format("svg"),
+  fornt-url("NeueHaasUnicaW1G-Bold/", "NeueHaasUnicaW1G-Bold.ttf") format("truetype"),
+  fornt-url("NeueHaasUnicaW1G-Bold/", "NeueHaasUnicaW1G-Bold.woff") format("woff"),
+  fornt-url("NeueHaasUnicaW1G-Bold/", "NeueHaasUnicaW1G-Bold.woff2") format("woff2");
+}

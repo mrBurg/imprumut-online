@@ -1,0 +1,11 @@
+.single-page {
+  .section {
+    &__title {
+      text-align: center;
+    }
+
+    &__content {
+      margin-top: 1em;
+    }
+  }
+}

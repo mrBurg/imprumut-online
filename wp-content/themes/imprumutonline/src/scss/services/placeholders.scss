@@ -1,0 +1,11 @@
+%display-flex {
+  @each $prefix in $prefixes {
+    @if $prefix != "-o-" {
+      display: #{$prefix}#{if($prefix == "-ms-", "flex", "")}box;
+    }
+    @if $prefix == "-webkit-" {
+      display: #{$prefix}flex;
+    }
+  }
+  display: flex;
+}

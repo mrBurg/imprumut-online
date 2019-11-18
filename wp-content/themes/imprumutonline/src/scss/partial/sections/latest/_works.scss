@@ -1,0 +1,33 @@
+&__works {
+  @include respond(675) {
+    order: 1;
+  }
+
+  @include respond(455) {
+    order: 2;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1em;
+
+    .work {
+      flex-basis: 33.33%;
+
+      &__link {
+        &:hover {
+          .work__img {
+            filter: grayscale(50%) brightness(30%);
+          }
+        }
+      }
+
+      &__img {
+        vertical-align: middle;
+        width: 100%;
+        transition: all .2s;
+      }
+    }
+  }
+}

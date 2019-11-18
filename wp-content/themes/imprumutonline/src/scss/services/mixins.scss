@@ -1,0 +1,126 @@
+@import './functions.scss';
+
+@mixin respond($data) {
+  @if type_of($data)==string {
+    @each $size in $data {
+      $media: $size;
+
+      @if $size=='xxs' {
+        $media: $xxs;
+      }
+
+      @else if $size=='xs' {
+        $media: $xs;
+      }
+
+      @else if $size=='sm' {
+        $media: $sm;
+      }
+
+      @else if $size=='md' {
+        $media: $md;
+      }
+
+      @else if $size=='lg' {
+        $media: $lg;
+      }
+
+      @else if $size=='xl' {
+        $media: $xl;
+      }
+
+      @else if $size=='xxl' {
+        $media: $xxl;
+      }
+
+      /* @else if $size=='xs-l' {
+      $media: $xs-l;
+    } */
+
+      /* @else if $size=='sm-l' {
+      $media: $sm-l;
+    } */
+
+      @media only screen and #{$media} {
+        @content;
+      }
+    }
+  }
+
+  @else {
+    @media only screen and #{respond($data)} {
+      @content;
+    }
+  }
+}
+
+@mixin wrap($data, $concat:false) {
+  @at-root {
+    #{$data}#{if($concat, '', ' ')}#{&} {
+      @content;
+    }
+  }
+}
+
+@mixin enhance($p:'.enhance') {
+  @at-root {
+    #{$p}#{&} & {
+      @content;
+    }
+  }
+}
+
+@mixin prefixes($data) {
+
+  @each $name,
+  $val in $data {
+    @each $prefix in $prefixes {
+      #{$prefix}#{$name}: $val;
+    }
+
+    #{$name}: $val;
+  }
+}
+
+@mixin transition($params: all, $delay: .2s) {
+  $data: (transition: ($params $delay));
+  @include prefixes($data);
+}
+
+@mixin placeholder {
+  $pref: ('-moz', ':-moz', '-ms', ':-webkit');
+  $count: 1;
+
+  &.placeholder {
+    @content;
+  }
+
+  @each $val in $pref {
+    &:#{$val}#{if($count > 2, '-input', '')}-placeholder {
+      @content;
+    }
+
+    $count: $count+1;
+  }
+}
+
+@mixin reflected-gradient($a: 0deg, $oc: #ccc, $ic: #eee) {
+  $start: 0%;
+  $center: 50%;
+  $end: 100%;
+  background: $ic;
+  // background: -webkit-gradient(linear, $a, color-stop($start, $oc), color-stop($center, $ic), color-stop($end, $oc));
+  // background: -webkit-linear-gradient($a, $oc $start, $ic $center, $oc $end);
+  // background: -moz-linear-gradient($a, $oc $start, $ic $center, $oc $end);
+  // background: -ms-linear-gradient($a, $oc $start, $ic $center, $oc $end);
+  // background: -o-linear-gradient($a, $oc $start, $ic $center, $oc $end);
+  // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$oc}', endColorstr='#{$oc}', GradientType='0');
+  background: linear-gradient($a + 90, $oc $start, $ic $center, $oc $end);
+}
+
+@mixin linear-gradient($a: 0deg, $oc: #ccc, $ic: #eee) {
+  $start: 0%;
+  $end: 100%;
+  background: $ic;
+  background: linear-gradient($a + 90, $oc $start, $ic $end);
+}

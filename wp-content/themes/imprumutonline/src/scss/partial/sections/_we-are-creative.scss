@@ -1,0 +1,72 @@
+&-we-are-creative {
+  background: {
+    attachment: fixed;
+    position: center;
+    size: cover;
+  }
+
+  max-width: none;
+  position: relative;
+
+  .we-are-creative {
+    &__arc {
+      left: 0;
+      max-height: 130px;
+      position: absolute;
+      transition: transform .2s;
+
+      &_top {
+        top: 0;
+        transform-origin: top;
+      }
+
+      &_bottom {
+        bottom: 0;
+        transform-origin: bottom;
+      }
+    }
+
+    &__content {
+      margin: auto;
+      max-width: $maxWidth;
+
+      &__inner {
+        $inner-size: 35em;
+        $coef: 4.4;
+
+        @include linear-gradient(0deg, transparentize($green, .2), transparentize($blue, .2));
+        border-radius: 50%;
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: column nowrap;
+        height: $inner-size;
+        justify-content: center;
+        padding: $inner-size / $coef;
+        transition: all .2s;
+        width: $inner-size;
+
+        @include respond(sm) {
+          $inner-size: 100%;
+        
+          height: auto;
+          padding: $inner-size / $coef;
+          width: $inner-size;
+        }
+      }
+    }
+
+    &__title,
+    &__data {
+      color: $white;
+    }
+
+    &__data,
+    &__form {
+      margin-top: 1em;
+    }
+
+    &__form {
+      text-align: center;
+    }
+  }
+}

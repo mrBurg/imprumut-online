@@ -1,0 +1,35 @@
+@import './../../services/mixins.scss';
+
+.best-price {
+  @include linear-gradient(-30deg, $green-lighter, $blue);
+  border-radius: 1.5em;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  min-height: 25em;
+  padding: 3em;
+  transition: all .2s;
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__title,
+  &__content {
+    color: $white;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__data {
+    margin-top: 1em;
+    text-align: justify;
+  }
+
+  &__form {
+    text-align: center;
+  }
+}

@@ -1,0 +1,41 @@
+$prefixes: -webkit-,
+-moz-,
+-ms-,
+-o-;
+
+$xxs: "(max-width: 320px)";
+$xs: "(max-width: 480px)";
+$sm: "(max-width: 640px)";
+$md: "(max-width: 959px)";
+$lg: "(min-width: 960px) and (max-width: 1199px)";
+$xl: "(min-width: 1200px)";
+$xxl: "(min-width: 1600px)";
+
+// $custom: ;
+
+// $xs-l: "(max-height: 480px) and (orientation: landscape) not (min-aspect-ratio: 1.5/1)";
+// $sm-l: "(max-height: 640px) and (orientation: landscape) not (min-aspect-ratio: 2/1)";
+
+// $xsl: "(max-height: 480px) and (orientation: landscape) and (max-width: 640px) not (min-aspect-ratio: 3/2)";
+// $sml: "(max-height: 640px) and (orientation: landscape) and (max-width: 959px) not (min-aspect-ratio: 4/3)";
+
+$minWidth: 320px;
+$maxWidth: 56.25em;
+
+$transiton: all .2s;
+
+$white: #fff;
+$black: #000;
+$green: #13b65c;
+$green-lighter: lighten($green, 10%);
+$green-darker: darken($green, 10%);
+$blue: #0cd3d2;
+$gray: #ccc;
+
+:export {
+  color: {
+    green: $green;
+    green-lighter: $green-lighter;
+    blue: $blue;
+  }
+}

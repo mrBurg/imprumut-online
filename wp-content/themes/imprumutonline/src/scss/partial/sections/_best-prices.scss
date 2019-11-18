@@ -1,0 +1,25 @@
+&-best-prices {
+  .best-prices {
+    &__title {
+      text-align: center;
+    }
+
+    &__content {
+      margin-top: 1em;
+    }
+
+    &__data {
+      align-content: space-between;
+      display: flex;
+      justify-content: space-between;
+      margin: auto;
+      overflow-x: auto;
+      width: 90%;
+    }
+
+    &__item {
+      box-sizing: border-box;
+      flex-grow: 1;
+    }
+  }
+}

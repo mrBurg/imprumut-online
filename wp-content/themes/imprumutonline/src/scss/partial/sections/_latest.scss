@@ -1,0 +1,39 @@
+&-latest {
+  background-attachment: fixed;
+  color: $white;
+  max-width: none;
+
+  .latest {
+    &__content {
+      background-color: transparentize($black, .2);
+      padding: 5em 0 4em;
+
+      @include respond(md) {
+        padding: 5em .5em;
+      }
+    }
+
+    &__data {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: auto;
+      max-width: $maxWidth;
+    }
+
+    &__item {
+      flex-grow: 1;
+      margin-bottom: 1em;
+
+      &__data {
+        margin: auto;
+        width: 220px;
+      }
+    }
+
+    @import './latest/_info.scss',
+    './latest/_news.scss',
+    './latest/_works.scss',
+    './latest/_contacts.scss';
+  }
+}

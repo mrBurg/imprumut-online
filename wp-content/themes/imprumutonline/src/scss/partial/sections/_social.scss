@@ -1,0 +1,20 @@
+&-social {
+  background-attachment: fixed;
+  max-width: none;
+
+  .social {
+    &__content {
+      @include linear-gradient(-30deg, transparentize($green-lighter, .2), transparentize($blue, .2));
+      padding: 3em 0;
+
+      @include respond(md) {
+        padding: 3em .5em;
+      }
+    }
+
+    &__data {
+      margin: auto;
+      max-width: $maxWidth;
+    }
+  }
+}

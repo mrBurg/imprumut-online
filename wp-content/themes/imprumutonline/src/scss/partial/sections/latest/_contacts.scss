@@ -1,0 +1,60 @@
+&__contacts {
+  @include respond(675) {
+    order: 3;
+  }
+
+  &__content,
+  &__address {
+    margin-top: 2em;
+  }
+
+  &__content {
+    // padding-left: 1.5em;
+  }
+
+  &__phone {
+    font-size: 1.9em;
+
+    @include respond(xxl) {
+      font-size: 30px;
+    }
+  }
+
+  &__address {
+
+    &__feedback,
+    &__position {
+      padding-left: 2em;
+      position: relative;
+
+      &:before {
+        background: {
+          color: transparent;
+          image: url('./../images/icons_16x16.svg');
+        }
+
+        content: "";
+        display: block;
+        height: 16px;
+        left: 0;
+        position: absolute;
+        top: .2em;
+        width: 16px;
+      }
+    }
+
+    &__feedback {
+      &:before {
+        background-position: 0 0;
+      }
+    }
+
+    &__position {
+      margin-top: .5em;
+
+      &:before {
+        background-position: -16px 0;
+      }
+    }
+  }
+}

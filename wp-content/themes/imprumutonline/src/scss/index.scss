@@ -1,0 +1,20 @@
+@import './services/constants.scss',
+'./services/mixins.scss';
+
+//grid
+@import './partial/grid/font.scss',
+'./partial/grid/grid.scss',
+'./partial/grid/ui.scss';
+
+//main
+@import './partial/main/header.scss';
+
+//Pages
+@import './partial/pages/single-page.scss';
+
+//Sections
+@import './partial/sections/sections.scss';
+
+//Blocks
+@import './partial/blocks/best-price.scss',
+'./partial/blocks/social.scss';

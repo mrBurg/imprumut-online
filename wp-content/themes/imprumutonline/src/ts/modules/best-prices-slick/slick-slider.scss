@@ -1,0 +1,66 @@
+@import './../../../scss/services/constants.scss';
+@import './../../../scss/services/mixins.scss';
+
+.slick {
+  &-slide {
+    opacity: 0;
+    transform: scale(.6, .6);
+    transition: all .2s;
+  }
+
+  &-active {
+    opacity: 1;
+    transform: scale(.8, .8);
+
+    &:not(.slick-current) {
+      .best-price {
+        @include linear-gradient(-30deg,
+        transparentize($green-lighter, .5),
+        transparentize($blue, .5));
+      }
+    }
+  }
+
+  &-current {
+    transform: scale(1, 1);
+  }
+
+  &-arrow {
+    background: {
+      color: $green;
+      image: url('./../../../images/icons_48x48.svg');
+    }
+
+    border-radius: 50%;
+    height: 48px;
+    transition: all .2s;
+    width: 48px;
+    z-index: 1;
+
+    &:before {
+      content: "";
+    }
+
+    &:hover,
+    &:focus {
+      background: {
+        color: $green-lighter;
+        image: url('./../../../images/icons_48x48.svg');
+      }
+    }
+  }
+
+  &-prev {
+    left: 15%;
+  }
+
+  &-next {
+    background-position-x: -48px;
+    right: 15%;
+
+    &:hover,
+    &:focus {
+      background-position-x: -48px;
+    }
+  }
+}

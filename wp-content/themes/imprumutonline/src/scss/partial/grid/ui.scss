@@ -1,0 +1,49 @@
+.ui {
+  &-button {
+    background: $white;
+
+    border: {
+      color: $gray;
+      radius: 2em;
+      style: solid;
+      width: 1px;
+    }
+
+    box-sizing: border-box;
+    cursor: pointer;
+
+    font: {
+      size: 1em;
+      family: NeueHaas
+    }
+
+    min-width: 6em;
+    padding: 1em;
+    text-align: center;
+    transition: all .2s ease;
+
+    &::-moz-focus-inner {
+      border: none;
+    }
+
+    &:hover {
+      border-color: $green;
+    }
+
+    &:active {
+      box-shadow: inset .1em .1em .3em transparentize($black, .8);
+    }
+
+    &-link {
+      @extend .ui-button;
+
+      color: inherit;
+      display: inline-block;
+      text-decoration: none;
+
+      &:active {
+        color: $green;
+      }
+    }
+  }
+}
