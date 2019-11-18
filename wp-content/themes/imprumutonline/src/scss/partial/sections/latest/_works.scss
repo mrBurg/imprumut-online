@@ -11,6 +11,8 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 1em;
+    max-height: 216px;
+    max-width: 216px;
 
     .work {
       flex-basis: 33.33%;

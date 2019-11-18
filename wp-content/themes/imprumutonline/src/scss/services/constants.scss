@@ -3,13 +3,21 @@ $prefixes: -webkit-,
 -ms-,
 -o-;
 
-$xxs: "(max-width: 320px)";
-$xs: "(max-width: 480px)";
-$sm: "(max-width: 640px)";
-$md: "(max-width: 959px)";
-$lg: "(min-width: 960px) and (max-width: 1199px)";
-$xl: "(min-width: 1200px)";
-$xxl: "(min-width: 1600px)";
+$xxs: 320;
+$xs: 480;
+$sm: 640;
+$md: 768;
+$lg: 960;
+$xl: 1200;
+$xxl: 1600;
+
+$size-xxs: "(max-width: #{ $xxs }px)";
+$size-xs: "(max-width: #{ $xs }px)";
+$size-sm: "(max-width: #{ $sm }px)";
+$size-md: "(max-width: #{ $lg - 1 }px)";
+$size-lg: "(min-width: #{ $lg }px) and (max-width: #{ $xl - 1 }px)";
+$size-xl: "(min-width: #{ $xl }px)";
+$size-xxl: "(min-width: #{ $xxl }px)";
 
 // $xs-l: "(max-height: 480px) and (orientation: landscape) not (min-aspect-ratio: 1.5/1)";
 // $sm-l: "(max-height: 640px) and (orientation: landscape) not (min-aspect-ratio: 2/1)";
@@ -35,5 +43,15 @@ $gray: #ccc;
     green: $green;
     green-lighter: $green-lighter;
     blue: $blue;
+  }
+
+  size: {
+    xxs: $xxs;
+    xs: $xs;
+    sm: $sm;
+    md: $md;
+    lg: $lg;
+    xl: $xl;
+    xxl: $xxl;
   }
 }

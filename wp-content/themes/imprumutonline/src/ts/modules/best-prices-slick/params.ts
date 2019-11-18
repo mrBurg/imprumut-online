@@ -1,20 +1,18 @@
+import * as cssVars from 'scss/services/constants.scss';
+
 export let params = {
-  // autoplay: true,
+  autoplay: true,
   autoplaySpeed: 2000,
   centerMode: true,
+  centerPadding: '0px',
   slidesToShow: 3,
   responsive: [{
-    breakpoint: 1024,
-    settings: {
-      slidesToShow: 3
-    }
-  }, {
-    breakpoint: 768,
+    breakpoint: cssVars['size-md'],
     settings: {
       slidesToShow: 1
     }
   }, {
-    breakpoint: 480,
+    breakpoint: cssVars['size-xs'],
     settings: {
       fade: true,
       slidesToShow: 1

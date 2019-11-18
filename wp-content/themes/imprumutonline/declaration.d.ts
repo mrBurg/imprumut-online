@@ -1,3 +1,10 @@
+declare module '*.scss';
+
+/*declare module '*.scss' {
+  const content: { [className: string]: string };
+  export default content;
+}*/
+
 // declare module '*.png'
 
 // declare function require(name:string) : any;
@@ -7,7 +14,4 @@
   export default content;
 }*/
 
-/*declare module '*.scss' {
-  const content: {[className: string]: string};
-  export default content;
-}*/
+
