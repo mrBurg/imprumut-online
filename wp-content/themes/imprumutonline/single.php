@@ -4,7 +4,7 @@
   $frontPageID = get_option('page_on_front');
   $frontPageFields = get_fields($frontPageID);
 
-  $afterPosts = $frontPageFields['after_content'];
+  $afterContent = $frontPageFields['after_content'];
 ?>
 
     <div class="container">
@@ -33,16 +33,25 @@
             }
           ?>
 
-          <?php
-            if ($afterPosts) {
-              foreach ($afterPosts as $afterPost) {
-                $post = $afterPost;
-                $template = get_fields($post->ID)['section'];
+            <hr class="divider">
 
-                get_template_part('template-parts/pages/' . $template);
+          <?php
+            if ($afterContent) {
+              foreach ($afterContent as $content) {
+                $contentQuery = new WP_Query(array('page_id' => $content->ID));
+
+                if ($contentQuery->have_posts()) {
+                  while ($contentQuery->have_posts()) {
+                    $contentQuery->the_post();
+
+                    $template = get_fields($content->ID)['section'];
+
+                    get_template_part('template-parts/pages/' . $template);
+                  }
+                }
+                wp_reset_postdata();
               }
             }
-            wp_reset_postdata();
           ?>
 
         </main>

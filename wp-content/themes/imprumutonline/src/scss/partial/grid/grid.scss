@@ -24,3 +24,7 @@ body {
   display: flex;
   flex-flow: column nowrap;
 }
+
+.divider {
+  border: 1px solid lighten($gray, 15%);
+}
