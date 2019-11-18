@@ -21,7 +21,7 @@
                 $postName = $post->post_name;
                 ?>
 
-                  <section id="section-<?= $post->ID; ?>" class="section section-<?= $postName; ?>">
+                  <section id="section-<?= $post->ID; ?>" class="section section-<?= $post->post_name; ?>">
                       <h1 class="<?= _bem('section', 'title') ?>"><?= the_title(); ?></h1>
                       <div class="<?= _bem('section', 'content') ?>">
                         <?= apply_filters('the_content', get_the_content()); ?>
@@ -31,15 +31,18 @@
                 <?php
               }
             }
+          ?>
 
+          <?php
             if ($afterPosts) {
               foreach ($afterPosts as $afterPost) {
-                $template = get_fields($afterPost->ID)['section'];
+                $post = $afterPost;
+                $template = get_fields($post->ID)['section'];
 
-                set_query_var('post', $afterPost);
                 get_template_part('template-parts/pages/' . $template);
               }
             }
+            wp_reset_postdata();
           ?>
 
         </main>
