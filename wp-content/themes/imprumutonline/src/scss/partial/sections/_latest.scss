@@ -25,6 +25,14 @@
       flex-grow: 1;
       margin-bottom: 1em;
 
+      @include respond(915) {
+        flex-basis: 50%;
+      }
+
+      @include respond(475) {
+        flex-basis: 100%;
+      }
+
       &__data {
         margin: auto;
         width: 220px;
