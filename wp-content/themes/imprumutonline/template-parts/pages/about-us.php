@@ -1,12 +1,12 @@
 <?php
-  $postFields = get_fields($post->ID);
+  $postFields = get_fields(get_the_ID());
 
   $image = $postFields['image'];
   $takeLoan = $postFields['take_loan'];
   $blocks = $postFields['blocks'];
 ?>
 
-<section id="section-<?= $post->ID; ?>" class="section section-<?= $post->post_name ?>">
+<section id="section-<?= the_ID(); ?>" class="section section-<?= $post->post_name ?>">
     <h1 class="<?= _bem('section', 'title'); ?> <?= _bem($post->post_name, 'title'); ?>">
       <?= the_title(); ?>
     </h1>

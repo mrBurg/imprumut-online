@@ -1,23 +1,12 @@
 <?php
-  $page = get_query_var('postsItem');
-  $pageFields = get_fields($page->ID);
-
-  $pageName = $page->post_name;
+  $postFields = get_fields(get_the_ID());
 ?>
 
-<h1>Default Template</h1>
-<section id="section-<?= $page->ID; ?>" class="section section-<?= $pageName; ?>">
-    <h2><?= $page->post_title; ?></h2>
-    <div>
-      <?= $page->post_content; ?>
+<section id="section-<?= the_ID(); ?>" class="section section-<?= $post->post_name; ?>">
+    <h1 class="<?= _bem('section', 'title'); ?> <?= _bem($post->post_name, 'title'); ?>">
+      <?= the_title(); ?>
+    </h1>
+    <div class="<?= _bem($post->post_name, 'content'); ?>">
+      <?= the_content() ?>
     </div>
 </section>
-
-<pre>
-
-  <?php
-    print_r($page);
-    print_r($pageFields);
-  ?>
-
-</pre>

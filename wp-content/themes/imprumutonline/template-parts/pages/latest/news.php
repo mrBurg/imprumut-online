@@ -1,5 +1,5 @@
 <?php
-  $postFields = get_fields($post->ID);
+  $postFields = get_fields(get_the_ID());
 
   $news = $postFields['news'];
   $newsSlug = $news['rubrics']->slug;

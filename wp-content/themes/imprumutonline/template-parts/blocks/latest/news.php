@@ -1,11 +1,11 @@
 <?php
-  $postFields = get_fields($post->ID);
+  $postFields = get_fields(get_the_ID());
 
   $img = $postFields['image'];
   $link = $postFields['link'];
 ?>
 
-<div id="news-<?= $post->ID; ?>" class="news-one news-<?= $post->post_name; ?>"
+<div id="news-<?= the_ID(); ?>" class="news-one news-<?= $post->post_name; ?>"
   style="background-image: url('<?= $img['url'] ?>');">
     <div class="<?= _bem('news-one', 'content'); ?>">
         <div class="<?= _bem('news-one', 'data'); ?>">

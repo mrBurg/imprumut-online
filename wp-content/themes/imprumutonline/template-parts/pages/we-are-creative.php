@@ -1,11 +1,11 @@
 <?php
-  $postFields = get_fields($post->ID);
+  $postFields = get_fields(get_the_ID());
 
   $background = $postFields['background'];
   $link = $postFields['link'];
 ?>
 
-<section id="section-<?= $post->ID; ?>" class="section section-<?= $post->post_name; ?>"
+<section id="section-<?= the_ID(); ?>" class="section section-<?= $post->post_name; ?>"
   style="background-image: url('<?= $background['url']; ?>');">
     <svg class="<?= _bem($post->post_name, 'arc', 'top'); ?>" viewBox="0 0 800 69" xmlns="http://www.w3.org/2000/svg">
         <path fill="#ffffff" d="M0,0l800,0v54.9c0,0-178.6-34-400,0s-400,0-400,0L0,0z"/>

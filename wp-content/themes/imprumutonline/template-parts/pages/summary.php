@@ -1,5 +1,5 @@
 <?php
-  $postFields = get_fields($post->ID);
+  $postFields = get_fields(get_the_ID());
 
   $statistic = $postFields['statistic'];
   $footer = $postFields['footer'];
@@ -7,7 +7,7 @@
   $readMore = $footer['read_more'];
 ?>
 
-<section id="section-<?= $post->ID; ?>" class="section section-<?= $post->post_name; ?>">
+<section id="section-<?= the_ID(); ?>" class="section section-<?= $post->post_name; ?>">
     <h2 class="<?= _bem('section', 'title'); ?> <?= _bem($post->post_name, 'title'); ?>">
       <?= the_title(); ?>
     </h2>

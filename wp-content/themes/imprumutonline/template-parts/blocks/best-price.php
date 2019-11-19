@@ -1,5 +1,5 @@
 <?php
-  $bestPriceFields = get_fields($post->ID);
+  $bestPriceFields = get_fields(get_the_ID());
 
   $link = $bestPriceFields['link'];
 ?>

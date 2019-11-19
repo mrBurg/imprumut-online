@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-11-14 06:37:23+0000\n"
+"PO-Revision-Date: 2019-10-22 20:58:11+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,10 +10,6 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: ru\n"
 "Project-Id-Version: Themes - Twenty Twenty\n"
-
-#. Description of the theme
-msgid "Our default theme for 2020 is designed to take full advantage of the flexibility of the block editor. Organizations and businesses have the ability to create dynamic landing pages with endless layouts using the group and column blocks. The centered content column and fine-tuned typography also makes it perfect for traditional blogs. Complete editor styles give you a good idea of what your content will look like, even before you publish. You can give your site a personal touch by changing the background colors and the accent color in the Customizer. The colors of all elements on your site are automatically calculated based on the colors you pick, ensuring a high, accessible color contrast for your visitors."
-msgstr "Наша стандартная тема для 2020 года разработана таким образом, чтобы в полной мере воспользоваться гибкостью редактора блоков. Организации и предприятия имеют возможность создавать динамические целевые страницы с бесконечными макетами, используя блоки групп и столбцов. Колонка с центрированным содержимым и отлаженная типография также делают его идеальным для традиционных блогов. Полные стили редактора дают вам хорошее представление о том, как будет выглядеть ваш контент, даже до публикации. Вы можете придать своему сайту индивидуальность, изменив цвета фона и цвета акцента в настройщике. Цвета всех элементов на вашем сайте автоматически рассчитываются на основе выбранных вами цветов, обеспечивая высокую доступную цветовую контрастность для ваших посетителей."
 
 #. Theme Name of the theme
 msgid "Twenty Twenty"

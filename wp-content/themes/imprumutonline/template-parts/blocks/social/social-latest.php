@@ -1,5 +1,5 @@
 <?php
-  $postFields = get_fields($post->ID);
+  $postFields = get_fields(get_the_ID());
 
   $social = $postFields['social']->slug;
   $socialList = new WP_Query(array('category_name' => $social, 'post_type' => 'post', 'posts_per_page' => -1));
@@ -12,7 +12,7 @@
       while ($socialList->have_posts()) {
         $socialList->the_post();
 
-        $socialPostFields = get_fields($post->ID);
+        $socialPostFields = get_fields(get_the_ID());
 
         $icons = $socialPostFields['icons'];
         $link = $socialPostFields['link'];

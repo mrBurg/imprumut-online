@@ -28,3 +28,12 @@ body {
 .divider {
   border: 1px solid lighten($gray, 15%);
 }
+
+.error-404 {
+  left: 50%;
+  max-width: 768px;
+  min-width: 320px;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

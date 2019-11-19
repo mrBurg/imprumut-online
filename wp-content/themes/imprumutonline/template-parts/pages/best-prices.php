@@ -1,11 +1,11 @@
 <?php
-  $postFields = get_fields($post->ID);
+  $postFields = get_fields(get_the_ID());
 
   $rubrics = $postFields['rubrics']->slug;
   $bestPrices = new WP_Query(array('category_name' => $rubrics, 'post_type' => 'post', 'posts_per_page' => -1));
 ?>
 
-<section id="section-<?= $post->ID; ?>" class="section section-<?= $post->post_name ?>">
+<section id="section-<?= the_ID(); ?>" class="section section-<?= $post->post_name ?>">
     <h2 class="<?= _bem('section', 'title'); ?> <?= _bem($post->post_name, 'title'); ?>">
       <?= the_title(); ?>
     </h2>

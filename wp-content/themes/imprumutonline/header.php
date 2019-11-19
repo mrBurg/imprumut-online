@@ -8,6 +8,7 @@
 
   <?php
     add_action('wp_enqueue_scripts', 'attach_theme_scripts');
+
     wp_head();
   ?>
 

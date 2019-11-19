@@ -1,5 +1,5 @@
 <?php
-  $postFields = get_fields($post->ID);
+  $postFields = get_fields(get_the_ID());
 
   $logo = $postFields['logo'];
   $mail = $postFields['mail'];

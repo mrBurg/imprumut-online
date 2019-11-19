@@ -21,7 +21,7 @@
                 $postName = $post->post_name;
                 ?>
 
-                  <section id="section-<?= $post->ID; ?>" class="section section-<?= $post->post_name; ?>">
+                  <section id="section-<?= the_ID(); ?>" class="section section-<?= $post->post_name; ?>">
                       <h1 class="<?= _bem('section', 'title') ?>"><?= the_title(); ?></h1>
                       <div class="<?= _bem('section', 'content') ?>">
                         <?= apply_filters('the_content', get_the_content()); ?>

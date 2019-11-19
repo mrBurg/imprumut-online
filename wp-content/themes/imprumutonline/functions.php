@@ -84,3 +84,12 @@
 
     return $result;
   }
+
+  function redirect_to_mainPage() {
+    if (!is_admin() && !is_front_page() && is_page()) {
+      wp_redirect(home_url());
+      exit();
+    }
+  }
+
+  add_action('template_redirect', 'redirect_to_mainPage');
